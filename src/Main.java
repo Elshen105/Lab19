@@ -6,14 +6,12 @@ public class Main {
 
         String text = new Scanner(System.in).nextLine();
 
-        String s = reverseText(text);
+        String text2 = reverseText(text);
 
-        boolean b = checkPolindrome(text, s);
-        if (b) {
-            System.out.println("Polindrome");
-        } else {
-            System.out.println("Is not Polindrome");
-        }
+        boolean b = isPalindrome(text, text2);
+
+        if (b) System.out.println("Palindrome");
+        else System.out.println("Is not Palindrome");
 
 
     }
@@ -28,9 +26,8 @@ public class Main {
     }
 
 
-    public static boolean checkPolindrome(String text1, String text2) {
-        if (text1.equalsIgnoreCase(text2)) return true;
-        return false;
+    public static boolean isPalindrome(String text1, String text2) {
+        return text1.equalsIgnoreCase(text2);
     }
 
 
